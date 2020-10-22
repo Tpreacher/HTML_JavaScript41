@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Lab Week 2</title>
+    <style>
+        html, body{
+            margin: 0px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            background-image: url("images/Blue\ lines.jpg");
+            background-repeat: repeat;
+        }
+        #container{
+            width: 1000px;
+            height: 100%;
+            background-color: dodgerblue;
+            margin-top: 0px;
+        }
+        h1{
+            margin: 0px;
+        }
+        #header{
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+        }
+        #nav{
+            margin: auto;
+            background-color: goldenrod;
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        #footer{
+            background-color: navy;
+            color: white;
+            text-align: center;
+        }
+        #content{
+            background-color: gray;
+            display: flex;
+        }
+        .content-left{
+            width: 500px;
+            height: 500px;
+            background-color: slateblue;
+            text-align: right;
+        }
+        .content-right{
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+        }
+        .btn{
+            background-color: yellow;
+            color: teal;
+            padding: 10px;
+            margin: 10px 10px 10px 0px;
+
+        }
+        .btn:hover{
+            background-color: turquoise;
+        }
+      
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+        <h1>Welcome to Week 2 Div Lab</h1>
+        </div>
+        <div id="nav">
+            <!--This is my list of navigation buttons-->
+            <a href="#" class="btn">Home</a>
+            <a href="#" class="btn">Bio</a>
+            <a href="#" class="btn">Games</a>
+            <a href="#" class="btn">Contact</a>
+        </div>
+        <div id="content">
+            <div class="content-left">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin, tellus vel varius aliquet, augue ex pretium tellus, at porttitor metus risus eu mauris. Curabitur porta imperdiet nisi eu lobortis. Cras iaculis eros ipsum, id maximus felis euismod nec. Fusce eleifend ex velit, ac feugiat augue euismod in. Nulla consectetur mi vel magna ullamcorper venenatis. Nam ullamcorper est mi, tristique aliquam magna imperdiet efficitur. Sed congue quis purus a feugiat. Nam pretium sed risus nec elementum</div>
+            <div class="content-right"><img src="images/Darth_Revan.jpg" alt=""></div>
+
+        </div>
+        <div id="footer">
+            &copy;2020 Tau Preacher New England Institute of Technology
+        </div>
+    </div>
+</body>
+</html>
+h
