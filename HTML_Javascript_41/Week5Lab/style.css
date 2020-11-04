@@ -1,0 +1,48 @@
+/*CSS goes here*/
+
+html, body{
+    height: 100%;
+    margin: 0;
+    font-family: 'Grandstander', cursive;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+#container{
+    width: 1000px;
+    background-color: tomato;
+
+}
+
+header{
+    background-color: white;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+nav{
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+canvas{
+    background-color: white;
+    border: 1px black solid;
+    margin-bottom: 10px;
+}
+
+footer{
+    background-color: white;
+    margin-bottom: 10px;
+    text-align: center;
+}
