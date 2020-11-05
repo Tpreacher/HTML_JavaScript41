@@ -31,9 +31,13 @@ car.color = "green";
 
 var car2 = new GameObject();
 car2.y = 400;
+car2.color = "red";
+car2.w = 75;
 
 var car3 = new GameObject();
 car3.y = 500;
+car3.color = "bergundy";
+car3.w = 25;    
 
 function main() {
     timer = requestAnimationFrame(main);
