@@ -1,0 +1,21 @@
+html,body{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#container{
+    width: 820px;
+    background-color: darkgreen;
+    padding: 10px;
+}
+
+h2{
+   text-align: center;
+}
+
+#canvas{
+    margin-right: 10px;
+    margin-left: 10px;
+}
