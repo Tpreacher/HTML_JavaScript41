@@ -1,0 +1,36 @@
+html, body{
+    background-image: url('images/AsteroidBackground.jpg');
+    display: flex;
+    justify-content: center;
+}
+
+
+#container{
+    width: 1000px;
+    height: 900px;
+    padding: 20px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+#header{
+    width: 800px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: slateblue;
+    margin: auto;
+    text-align: auto;
+    padding-top: 20px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Bungee', cursive;
+    color: antiquewhite;
+    background-color: transparent;
+}

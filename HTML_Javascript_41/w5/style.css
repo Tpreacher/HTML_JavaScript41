@@ -1,0 +1,24 @@
+
+.container, #panel_a, #panel_b, #panel_c { 
+    width: 100%;
+    height: 250px; 
+}
+.container { 
+    border: 1px #ccc solid; 
+    position: relative; 
+    background: #000;
+}
+#panel_a{ 
+    background-image: url('../images/space1.gif'); 
+}
+#panel_b{ 
+    background-image: url('../images/space2.gif'); 
+}
+#panel_c{ 
+    background-image: url('../images/space3.gif'); 
+}
+#panel_d { 
+    float:right;
+}
+.relative { position: relative; }
+.absolute { position: absolute; }
