@@ -205,7 +205,7 @@ gameStates[0] = function(){
     ctx.fillStyle = "white";
     ctx.textAlign = "center"
     ctx.fillText("Astro Crash Course", c.width/2, c.height/2 - 30);
-    ctx.font = '15px Bungee';
+    ctx.font = "15px 'Bungee'";
     ctx.fillText("Press Enter to Start", c.width/2, c.height/2 + 20);
     ctx.restore();
 }
@@ -213,7 +213,7 @@ gameStates[0] = function(){
 gameStates[1] = function(){
     //Draws score to the HUD
     ctx.save();
-    ctx.font = '15px Bungee';
+    ctx.font = "15px 'Bungee'";
     ctx.fillStyle = 'white';
     ctx.fillText("Score: " + score.toString(), c.width - 150, 30);
     ctx.restore();
@@ -281,7 +281,7 @@ gameStates[2] = function(){
     if(score > highScore){
         highScore = score;
         ctx.save();
-        ctx.font = '30px PressStart2P';
+        ctx.font ="30px 'Press Start 2P'";
         ctx.fillStyle = "white";
         ctx.textAlign = "center"
         ctx.fillText("Game Over, Your score was: " + score.toString(), c.width/2, c.height/2 - 60);
@@ -294,7 +294,7 @@ gameStates[2] = function(){
     }
     else{
         ctx.save();
-        ctx.font = "30px 'Press Start 2P'";
+        ctx.font = "20px 'Press Start 2P'";
         ctx.fillStyle = "white";
         ctx.textAlign = "center"
         ctx.fillText("Game Over, Your score was: " + score.toString(), c.width/2, c.height/2 - 60);
