@@ -8,12 +8,13 @@ var gameOver = true;
 var score = 0;
 var gameStates = [];
 var currentState = 0;
-var ship = new Image();
+var ship;
 var highScore = 0;
 var bgMain = new Image();
+var playerShip = new Image();
 
 bgMain.src = "images/MenuScreen.jpg";
-ship.src = "images/ship.jpg";
+playerShip.src = "images/ship.png";
 
 //event listener to trigger main when image is loaded
 bgMain.onload = function(){
@@ -23,6 +24,7 @@ bgMain.onload = function(){
 function randomRange(high, low){
     return Math.random() * ( high - low) + low;
 }
+
 
 //Asteroids GameObject Class
 function Asteroids(){
@@ -63,7 +65,10 @@ function PlayerShip(){
     this.draw = function(){
         ctx.save();
         ctx.translate(this.x,this.y);
-
+        drawSprite();
+        function drawSprite(){
+            ctx.drawImage(playerShip, c.width/2, c.height/2, 20, 20);   
+        }
         // draws afterburner flame
         if(this.up == true ||  this.left == true || this.right == true){
             ctx.save();
@@ -74,14 +79,14 @@ function PlayerShip(){
             else{
                 this.flamelength = 30;
             }
-            ctx.beginPath();
-            ctx.fillStyle = "orange";
-            ctx.moveTo(0, this.flamelength);
-            ctx.lineTo(5, 5);
-            ctx.lineTo(-5, 5);
-            ctx.lineTo(0, this.flamelength);
-            ctx.closePath();
-            ctx.fill();
+            //ctx.beginPath();
+            //ctx.fillStyle = "orange";
+            //ctx.moveTo(0, this.flamelength);
+            //ctx.lineTo(5, 5);
+            //ctx.lineTo(-5, 5);
+            //ctx.lineTo(0, this.flamelength);
+            //ctx.closePath();
+            //ctx.fill();
             ctx.restore();
         }
         ctx.beginPath();
@@ -92,7 +97,8 @@ function PlayerShip(){
         ctx.lineTo(0, -10);
         ctx.closePath();
         ctx.fill();
-
+      
+        
         ctx.restore();
     }
 
@@ -201,7 +207,7 @@ function keyPressDown(e){
 gameStates[0] = function(){
     ctx.drawImage(bgMain,0,0,c.width,c.height);
     ctx.save();
-    ctx.font = "30px 'Bungee'";
+    ctx.font = "30px 'Press Start 2P'";
     ctx.fillStyle = "white";
     ctx.textAlign = "center"
     ctx.fillText("Astro Crash Course", c.width/2, c.height/2 - 30);
