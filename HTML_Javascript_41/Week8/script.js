@@ -8,11 +8,12 @@ var gameOver = true;
 var score = 0;
 var gameStates = [];
 var currentState = 0;
-var ship;
+var ship = new Image();
 var highScore = 0;
 var bgMain = new Image();
 
-bgMain.src = "images/rocks.jpg";
+bgMain.src = "images/MenuScreen.jpg";
+ship.src = "images/ship.jpg";
 
 //event listener to trigger main when image is loaded
 bgMain.onload = function(){
@@ -48,11 +49,6 @@ function Asteroids(){
 
 //class for player ship
 function PlayerShip(){
-    this.type = ship;
-    if (ship == "Image") {
-        this.ship = new Image();
-        this.ship.src = "images/ship.jpg";
-      }
     this.x = c.width/2;
     this.y = c.height/2;
     this.w = 20;
@@ -125,6 +121,10 @@ function PlayerShip(){
             this.vy = 0;
         }
     }
+
+}
+
+function render(){
 
 }
 
@@ -281,10 +281,10 @@ gameStates[2] = function(){
     if(score > highScore){
         highScore = score;
         ctx.save();
-        ctx.font ="30px 'Press Start 2P'";
+        ctx.font ="20px 'Press Start 2P'";
         ctx.fillStyle = "white";
         ctx.textAlign = "center"
-        ctx.fillText("Game Over, Your score was: " + score.toString(), c.width/2, c.height/2 - 60);
+        ctx.fillText("Simulation Has Ended, Your score was: " + score.toString(), c.width/2, c.height/2 - 60);
         ctx.fillText("Your New High Score is: " + highScore.toString() , c.width/2, c.height/2 - 30);
         ctx.fillText("New Record!!", c.width/2, c.height/2 );
         ctx.font = "15px 'Press Start 2P'";
