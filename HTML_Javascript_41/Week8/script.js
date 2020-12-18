@@ -12,9 +12,13 @@ var ship;
 var highScore = 0;
 var bgMain = new Image();
 var playerShip = new Image();
+var bgEnd = new Image();
+var rock = new Image();
 
 bgMain.src = "images/MenuScreen.jpg";
 playerShip.src = "images/ship.png";
+bgEnd.src = "images/EndScreen.jpg";
+rock.src = "images/asteroid.png"
 
 //event listener to trigger main when image is loaded
 bgMain.onload = function(){
@@ -37,11 +41,12 @@ function Asteroids(){
 
     this.draw = function(){
         ctx.save();
-        ctx.beginPath();
-        ctx.fillStyle = this.color;
-        ctx.arc(this.x,this.y, this.radius, 0, 2*Math.PI,true);
-        ctx.closePath();
-        ctx.fill();
+        //ctx.beginPath();
+        //ctx.fillStyle = this.color;
+        //ctx.arc(this.x,this.y, this.radius, 0, 2*Math.PI,true);
+        //ctx.closePath();
+        //ctx.fill();
+        ctx.drawImage(rock,this.x/1,this.y/1,this.vx-10,this.vy-20);
         ctx.restore();
 
     }
@@ -65,10 +70,8 @@ function PlayerShip(){
     this.draw = function(){
         ctx.save();
         ctx.translate(this.x,this.y);
-        drawSprite();
-        function drawSprite(){
-            ctx.drawImage(playerShip, c.width/2, c.height/2, 20, 20);   
-        }
+           
+     
         // draws afterburner flame
         if(this.up == true ||  this.left == true || this.right == true){
             ctx.save();
@@ -79,14 +82,14 @@ function PlayerShip(){
             else{
                 this.flamelength = 30;
             }
-            //ctx.beginPath();
-            //ctx.fillStyle = "orange";
-            //ctx.moveTo(0, this.flamelength);
-            //ctx.lineTo(5, 5);
-            //ctx.lineTo(-5, 5);
-            //ctx.lineTo(0, this.flamelength);
-            //ctx.closePath();
-            //ctx.fill();
+            ctx.beginPath();
+            ctx.fillStyle = "orange";
+            ctx.moveTo(0, this.flamelength);
+            ctx.lineTo(5, 5);
+            ctx.lineTo(-5, 5);
+            ctx.lineTo(0, this.flamelength);
+            ctx.closePath();
+            ctx.fill();
             ctx.restore();
         }
         ctx.beginPath();
@@ -98,7 +101,7 @@ function PlayerShip(){
         ctx.closePath();
         ctx.fill();
       
-        
+        ctx.drawImage(playerShip,-this.w/2,-40,this.w*2-20, this.h/2+50,)
         ctx.restore();
     }
 
@@ -284,6 +287,7 @@ gameStates[1] = function(){
 }
 
 gameStates[2] = function(){
+    ctx.drawImage(bgEnd,0,0,c.width,c.height)
     if(score > highScore){
         highScore = score;
         ctx.save();
